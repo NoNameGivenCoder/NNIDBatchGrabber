@@ -6,16 +6,6 @@ const axios = require('axios')
 
 var nnids = JSON.parse(fs.readFileSync(__dirname + "/nnids.json").toString())
 
-function setUp() {
-    if (nnids.length < 1) {
-        console.log(`Not enough NNID's`)
-
-        return;
-    }
-}
-
-setUp()
-
 async function GetData() {
     for (let i = 0; i < nnids.length; i++) {
         //Getting data
